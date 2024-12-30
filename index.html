@@ -1,3 +1,5 @@
+<title>log clock</title>
+
 <style>
 #clock {
   width: 225px;
@@ -8,7 +10,6 @@
 }
 #clock .hand {
   rotate: 0deg;
-  /*transform-origin: bottom;*/
   position: absolute;
   position-area: center;
 }
@@ -22,9 +23,9 @@
 #clock #minute_hand {
   background: #000;
   width: 3px;
-  height: 100px;
+  height: 110px;
   transform-origin: 50% 90px;
-  bottom: 80px;
+  bottom: 70px;
 }
 #clock #hour_hand {
   background: #000;
@@ -61,18 +62,6 @@
   font-size: 18px;
   top: 2px;
 }
-#clock .center {
-  position: absolute;
-  /* margin: 50% 50%; */
-  background: #f00;
-  width: 5px;
-  height: 5px;
-  /* top: 50%; */
-  /* bottom: 50%; */
-  /* left: 50%; */
-  position-area: center;
-  border-radius: 50%;
-}
 </style>
 
 <div id="date"></div>
@@ -97,6 +86,7 @@ hourHand.className = 'hand'
 clock.appendChild(secondHand)
 clock.appendChild(minuteHand)
 clock.appendChild(hourHand)
+
 
 const isLog = clock.dataset.type == 'log' ? true : false
 
